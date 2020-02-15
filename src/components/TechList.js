@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import TechItem from './TechItem';
 
 class TechList extends Component {
+  static defaultProps = {
+    tech: 'DefaultProps',
+  };
+
+  static propTypes = {
+    tech: PropTypes.string,
+  };
+
   state = {
     newTech: '',
     techs: ['Node.js', 'ReactJS', 'React Native'],
@@ -36,6 +45,10 @@ class TechList extends Component {
               onDelete={() => this.handleDelete(tech)}
             />
           ))}
+          <TechItem
+          // tech="ExpressJS"
+          // onDelete={() => this.handleDelete(tech)}
+          />
         </ul>
         <input
           type="text"
