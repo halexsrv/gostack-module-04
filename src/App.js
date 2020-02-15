@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
 
+import test from './assets/test.png';
+
 function App() {
-  return <h1>Hello World</h1>;
+  return <img width="200" src={test} />;
 }
 
 export default App;
